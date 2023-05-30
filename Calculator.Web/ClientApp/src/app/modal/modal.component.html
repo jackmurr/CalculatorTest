@@ -1,0 +1,26 @@
+<app-overlay></app-overlay> 
+
+<div class="app_modal__modal {{isOpen ? '' :  'app_modal__modal--hidden'}}">
+  <div class="app_modal__header" [ngStyle]="{'background-color': headerColor, 'color' : headerTextColor}">
+    <h1>Simple Calulator</h1>
+  </div>
+  <div class="app_modal__container" [ngStyle]="{'background-color': bodyColor, 'color' : bodyTextColor}">
+    <p class="home">Enter two numbers below then click add or subtract</p>
+
+    <div class="app_modal__container-input">
+      <label for="start">Start: </label>
+      <input type="number" id="start" value="{{start}}" #start (blur)="updateStart(start.value)" />
+    </div>
+    <div class="app_modal__container-input">
+      <label for="amount">Amount: </label>
+      <input type="number"  id="amount" value="{{amount}}"  #amount (blur)="updateAmount(amount.value)" />
+    </div>
+
+    <button class="app_modal__container-button" (click)="add()">Add</button>
+    <button class="app_modal__container-button" (click)="subtract()">Subtract</button>
+
+    <h2 class="app_modal__container-result">{{result}}</h2>
+
+  </div>
+  <div class="app_modal__footer" [ngStyle]="{'background-color': footerColor, 'color' : footerTextColor}"><span (click)="open()">Close</span></div>
+</div>

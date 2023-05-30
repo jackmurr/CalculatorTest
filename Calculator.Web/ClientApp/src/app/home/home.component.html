@@ -1,0 +1,42 @@
+
+<app-modal></app-modal>
+<div class="home__container">
+  <h1>Simple Calculator</h1>
+
+  <p>Please select the colors for your modal below, then the calculator button below.</p>
+  <div class="home__style-container">
+    <h4>Header</h4>
+    <div>
+      <label for="header">Background: </label>
+      <input id="header" value="{{headerColor}}" type="color" #h (blur)="updateHeaderColor(h.value)" />
+    </div>
+    <div>
+      <label for="headerText">Text: </label>
+      <input id="headerText" value="{{headerTextColor}}" type="color" #ht (blur)="updateHeaderTextColor(ht.value)" />
+    </div>
+  </div>
+  <div class="home__style-container">
+    <h4>Body</h4>
+    <div>
+      <label for="body">Background: </label>
+      <input id="bodyText" value="{{bodyColor}}" type="color" #b (blur)="updateBodyColor(b.value)" />
+    </div>
+    <div>
+      <label for="body">Text: </label>
+      <input id="bodyText" value="{{bodyTextColor}}" type="color" #bt (blur)="updateBodyTextColor(bt.value)" />
+    </div>
+  </div>
+  <div class="home__style-container">
+    <h4>Footer</h4>
+    <div>
+      <label for="footer">Background: </label>
+      <input id="footer" value="{{footerColor}}" type="color" #f (blur)="updateFooterColor(f.value)" />
+    </div>
+    <div>
+      <label for="footerText">Text: </label>
+      <input id="footerText" value="{{footerTextColor}}" type="color" #ft (blur)="updateFooterTextColor(ft.value)" />
+    </div>
+  </div>
+  <button class="home__button" (click)="callModal()">Calculator</button>
+
+</div>

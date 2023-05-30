@@ -1,0 +1,31 @@
+body {
+  background-color: #E7E5DF;
+  height: 100vh;
+  width: 100%;
+}
+.main__container {
+  background-color: #E7E5DF;
+  width: 500px;
+  margin: auto;
+}
+
+@media(max-width: 900px) {
+  .main__container {
+    width: 100%;
+    margin: unset;
+    padding: unset;
+  }
+
+  .main__nav {
+    display: none;
+  }
+}
+
+.main__nav {
+    height: 50px;
+    width: 100%;
+  background-color: #1C110A;
+}
+
+
+/* alot of the styles could be % rather than px, but tend to go for 90% then 10 and stopped at 90 for this */

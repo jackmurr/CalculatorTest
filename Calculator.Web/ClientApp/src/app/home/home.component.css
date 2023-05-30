@@ -1,0 +1,28 @@
+/* &__input -> ideally be using less or equiv - should match module name app-home  */
+.home__container {
+}
+
+.home__style-container {
+
+}
+
+.home__style-container label {
+    width:30%;
+}
+.home__style-container input {
+    width:30%;
+}
+
+.home__button {
+  margin-top: 25px;
+  width: 80%;
+  height: 50px;
+}
+
+
+@media(max-width: 900px) {
+  .home__container {
+  padding:50px;
+  }
+}
+
